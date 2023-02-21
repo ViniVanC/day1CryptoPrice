@@ -1,5 +1,5 @@
 import React from "react";
 
-export const PriceItem = () => {
-  return <div>PriceItem</div>;
+export const PriceItem = ({ name, price, change }) => {
+  return <div></div>;
 };
