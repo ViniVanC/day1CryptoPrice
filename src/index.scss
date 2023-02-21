@@ -5,4 +5,89 @@
   line-height: 1.5;
   font-weight: 400;
   font-size: 18px;
+
+  background: #161616;
+  color: #d1d1d1;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.App {
+  min-height: inherit;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.priceList {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  border-radius: 20px;
+
+  &__logo {
+    max-width: 100px;
+    margin-right: 50px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: end;
+
+    h3 {
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    span {
+      color: rgba($color: #d1d1d1, $alpha: 0.5);
+    }
+  }
+
+  &__price {
+    display: grid;
+    margin-left: auto;
+    justify-items: end;
+  }
+
+  &.rising {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #acff2f28 100%);
+    .price {
+      color: #adff2f;
+    }
+  }
+
+  &.falling {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #ff634728 100%);
+    .price {
+      color: #ff6347;
+    }
+  }
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.change {
+  color: rgba($color: #d1d1d1, $alpha: 0.5);
 }

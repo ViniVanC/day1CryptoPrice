@@ -18,7 +18,9 @@ function App() {
 
   return (
     <div className="App">
-      <PriceList coins={coins} />
+      <div className="container">
+        <PriceList coins={coins} />
+      </div>
     </div>
   );
 }
